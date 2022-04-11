@@ -65,7 +65,7 @@ Dithers take around 8 seconds to complete, and help compensate for bad pixels ar
 
 **A: Yes, but this can be difficult**
 
-Given the nature of the observatory, the PSF during your observation may differ significantly from the PSF during the observation of the standard star. PSF-subtraction is commonly done by averaging the PSF of the standard star over the observation. 
+Given the nature of the observatory, the PSF during your observation may differ significantly from the PSF during the observation of the standard star. PSF-subtraction is commonly done by averaging the PSF of the standard star over the observation.
 
 ## FIFI-LS
 
@@ -101,7 +101,7 @@ The PSF is oversampled in the FIFI-LS data. The spacing in the spatial dimension
 
 **A: The window that lets in light.**
 
-The boresight is the rectangle region that light passes through to get to the instruments. The boresight is occasionally calibrated to ensure no loss of signal outside of this window.
+The boresight is the rectangular region that light passes through to get to the instruments. The boresight is occasionally calibrated to ensure no loss of signal outside of this window.
 
 
 ### What is the best way to access the FITS header information?
@@ -125,7 +125,7 @@ with fits.open(filename) as hdul:
 
 *filename* corresponds to the name of the file (and its absolute path).
 
-You can also see the full header through IRSA. After launching your searchh, select the desired FITS file in the relevant instrument tab on the left hand side. A Data tab will appear, from which you can access the full header (using the 'information' icon). 
+You can also see the full header through IRSA. After launching your search, select the desired FITS file in the relevant instrument tab on the left hand side. A Data tab will appear, from which you can access the full header (using the 'information' icon).
 
 ### How to get the PWV from the header
 
