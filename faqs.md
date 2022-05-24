@@ -1,5 +1,47 @@
 # FAQs
 
+## GREAT
+
+### What is the size of the honeycomb map?
+
+**A: It depends on the frequency, but generally HFA ~ 42" and LFA ~ 14"**
+
+The size of the honeycomb pattern depends on your primary frequency: HFA or LFA. The size of one honeycomb map for the HFA has diameter of about 42”, while the central pixel moves only in an area with a diameter of about 14”. Therefore, this is also about the diameter of the area covered by the central pixel of the LFA. Since the FWHM of the LFA beam is about 14”, you get a highly oversampled map of the central LFA beam area. The outer pixels of the LFA won’t be of any interest for a source size of 15”. For the HFA, the outer pixels will ensure that you get your source and some adjacent sky mapped as well.
+
+### How do heterodyne instruments work?
+
+**A: By using a "Carrier Signal"**
+
+See explanations by 1) [David Frayer (GBT)](https://greenbankobservatory.org/wp-content/uploads/2020/06/Tracing-the-Signal.pdf), 2) [ Dale E. Gary
+(NJIT)](https://web.njit.edu/~gary/728/Lecture7.html), and 3) [James J. Condon and Scott Ransom (NRAO)](https://www.cv.nrao.edu/~sransom/web/Ch3.html#S6.SS4).
+
+### What is the different between brightness temperature and radiation temperature?
+
+**A: T<sub>A</sub>, T<sub>A</sub><super>*</super>, & T<sub>mb</sub> are convolved with different signal responses.**
+
+Antenna temperature (T<sub>A</sub>): Actual measured noise temperature of antenna including inefficiencies and all other noise sources including the atmosphere. [Guan et al. (2012, A&A 542, L4)](http://dx.doi.org/10.1051/0004-6361/201218925) discusses the calibration scheme for GREAT, i.e. how to get from T<sub>A</sub> to T<sub>A</sub><super>*</super>.
+
+Forward beam brightness temperature (T<sub>A</sub><super>*</super>): The convolution of the source brightness with the full forward antenna response. Also known as corrected antenna temperature, because it is the observed source antenna temperature corrected for atmospheric attenuation, radiative loss, and rearward scattering and spillover.
+
+Main-beam brightness temperature (T<sub>mb</sub>): The convolution of the source brightness distribution on the sky with the main-beam profile of the telescope.
+
+### How do I get from brightness temperature to flux density?
+
+**A: [See GREAT Observer's handbook (Section 6.3.2)](https://www-sofia.atlassian.net/wiki/spaces/OHFC1/pages/1147523/6.+GREAT#6.3.2-Conversion-from-Temperature-to-Flux-Density)**
+
+
+
+
+### What do the GREAT filenames mean?
+
+**A: Depends on Level of data (older data may have different names)**
+
+The GREAT team can deliver several types of data. Level 3 data are typically fully calibrated individual spectra. The GREAT team delivers two CLASS files for each project to the SOFIA Science Center. One of the files contains the source spectra in units of the forward- beam brightness temperature, T<sub>A</sub><super>*</super>, and additional output spectra such as receiver over system temperature, T<sub>A</sub> / T<sub>sys</sub>, plots, Sky-Hot spectra and fits, and spectra of the optical depth used to calibrate the data. The second Level 3 file contains source spectra only, in units of the main-beam temperature, TMB.
+
+Level 4 data are CLASS data products converted to FITS-files that are a combination of Level 3 spectra, such as average spectra or spectral data cubes. Usually, the Level 4 data is in TMB units, but there are instances where the data is calibrated on the T<sub>A</sub><super>*</super> scale. Check the header and/or the ancillary documents. Level 4 files can contain multiple frequencies for a single target/source. The data can come from several flights. It will be associated to one flight in the data base. Level 4 files will not contain multiple sources.
+
+See [video by Juan Luis Verbana](https://www.youtube.com/watch?v=Sg3tlLMGH5Q) on GREAT data products.
+
 ## EXES
 
 ### How do I get an absolute flux calibration of EXES data?
