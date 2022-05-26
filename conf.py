@@ -31,10 +31,15 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.viewcode",
     "sphinx.ext.napoleon",
-    "recommonmark",
     "sphinx.ext.autosectionlabel",
+    "sphinx_sitemap",
+    "recommonmark",
     # "sphinxjp.themes.basicstrap",
 ]
+
+# for sitemap
+html_baseurl = "https://sofia-faqs.readthedocs.io/en/latest/"
+
 
 autosectionlabel_prefix_document = True
 
